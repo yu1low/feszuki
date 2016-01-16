@@ -1,0 +1,22 @@
+<h1>イベントの新規登録</h1>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for(@event) do |f| %>
+
+      <%= f.label :name, "イベント名" %>
+      <%= f.text_field :name %>
+
+      <%= f.label :date, "日程" %>
+      <%= f.text_field :date %>
+
+      <%= f.label :address, "住所" %>
+      <%= f.text_field :address %>
+
+      <%= f.label :about, "概要" %>
+      <%= f.text_area :about %>
+
+      <%= f.submit "新規登録", class: "btn btn-large btn-primary" %>
+    <% end %>
+  </div>
+</div>
