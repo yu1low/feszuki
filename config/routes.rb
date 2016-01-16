@@ -7,9 +7,11 @@ Rails.application.routes.draw do
   delete 'logout', to: 'sessions#destroy'
   
   get 'addevent', to: 'events#new'
+  get 'addartist', to: 'artists#new'
   
   resources :users
   resources :events
+  resources :artists
   resources :sessions, only: [:new, :create, :destroy]
 
   # The priority is based upon order of creation: first created -> highest priority.
