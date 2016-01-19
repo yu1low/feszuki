@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   
+
+
   root to: 'welcome#index'
   get 'signup',  to: 'users#new'
   get    'login' , to: 'sessions#new'
@@ -8,11 +10,14 @@ Rails.application.routes.draw do
   
   get 'addevent', to: 'events#new'
   get 'addartist', to: 'artists#new'
+  get 'map/index'
   
   resources :users
   resources :events
   resources :artists
+  resources :map
   resources :sessions, only: [:new, :create, :destroy]
+  resources :relationships, only: [:create, :destroy]
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

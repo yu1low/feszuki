@@ -1,4 +1,9 @@
 <h1>
   <%= gravatar_for @user %>
+  <%= render 'follow_form' if logged_in? %>
   <%= @user.name %>
+  <%= @user.email %>
+  <%= @user.location %>
+  <%= @user.profile %>
+  <%= link_to "編集", edit_user_path %>
 </h1>
