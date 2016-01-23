@@ -3,6 +3,8 @@ class EventsController < ApplicationController
   
   def show
     @event = Event.find(params[:id])
+    @ecomment = current_user.ecomments.build if logged_in?
+    @ecomments = @event.ecomments.order(created_at: :desc)
   end
   
   def new

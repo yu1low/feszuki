@@ -6,4 +6,13 @@
     <li><%= @event.about %></li>
     <li><%= link_to "編集", edit_event_path %></li>
   </ul>
+  <%= render 'shared/ecomment_form' %>
+  <% if @event.ecomments.any? %>
+    <h3>コメント (<%= @event.ecomments.count %>)</h3>
+      <ol class="ecomments">
+        <%= render @ecomments %>
+      </ol>
+    <% end %>
+  <a>Welcome to Feszuki!</a>
+  <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
 </h2>

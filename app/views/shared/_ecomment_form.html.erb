@@ -1,0 +1,8 @@
+<%= form_for(@ecomment) do |f| %>
+  <%= render 'shared/error_messages', object: f.object %>
+  <div class="field">
+    <%= f.text_area :content, placeholder: "Compose new comment..." %>
+    <%= hidden_field_tag :event_id, @event.id %>
+  </div>
+  <%= f.submit "コメント", class: "btn btn-primary" %>
+<% end %>

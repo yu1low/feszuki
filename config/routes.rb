@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   resources :users
   resources :events
   resources :artists
+  resources :ecomments
   resources :map
   resources :sessions, only: [:new, :create, :destroy]
   resources :relationships, only: [:create, :destroy]
