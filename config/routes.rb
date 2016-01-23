@@ -1,6 +1,4 @@
 Rails.application.routes.draw do
-  
-
 
   root to: 'welcome#index'
   get 'signup',  to: 'users#new'
@@ -17,6 +15,7 @@ Rails.application.routes.draw do
   resources :artists
   resources :ecomments
   resources :map
+  resources :movie
   resources :sessions, only: [:new, :create, :destroy]
   resources :relationships, only: [:create, :destroy]
 

@@ -29,6 +29,8 @@ gem 'bootstrap-sass'
 gem "gmaps4rails"
 gem "geocoder"
 
+gem 'yt', '~> 0.25.5'
+
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 
