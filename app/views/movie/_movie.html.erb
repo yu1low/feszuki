@@ -1,4 +1,8 @@
-<li id="movie-<%= video.id %>">
-  <%= video.title %>
-  <%= video.thumbnail_url %>
+<ul>
+<% videos.first(10).each do |video| %>
+<li id="video-<%= video.id %>">
+  <%= link_to video.title, 'https://www.youtube.com/watch?v=' + video.id %>
+  <%= image_tag(video.thumbnail_url , alt: video.title) %>
 </li>
+<% end %>
+</ul>
